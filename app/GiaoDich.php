@@ -20,3 +20,19 @@ class GiaoDich extends Model
         return $this->belongsTo('App\User', 'user_cmnd', 'cmnd');
     }
 }
+class DaChinhSua extends Model
+{
+    protected $table = 'giao_dichs';
+
+    protected $guarded = [];
+
+    public function xe()
+    {
+        return $this->belongsTo('App\Xe', 'xe_bien_so', 'bien_so');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'user_cmnd', 'cmnd');
+    }
+}
